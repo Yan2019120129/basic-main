@@ -1,0 +1,48 @@
+#---------admin/controllers/shop/user/attention
+POST {{base_url}}/shop/address/index
+Content-Type: application/json
+Token:{{token}}
+Token-Key: {{token_key}}
+
+{
+    "status": 1,
+    "shipping_address": "247.216.182.192",
+    "is_default": -1,
+    "country": "Equatorial Guinea",
+    "pagination": {
+        "sortBy": "id",
+        "descending": true,
+        "page": 1,
+        "rowsPerPage": 2
+    }
+}
+
+###
+POST {{base_url}}/shop/address/delete
+Content-Type: application/json
+Token:{{token}}
+Token-Key: {{token_key}}
+
+{
+  "id": [11,12]
+}
+
+
+###
+POST {{base_url}}/shop/address/update
+Content-Type: application/json
+Token:{{token}}
+Token-Key: {{token_key}}
+
+{
+  "id": 1,
+  "name": "yan",
+  "phone": "19907751429",
+  "country": "ljjoasf",
+  "shipping_address": "yulin",
+  "door_number": 2415421,
+  "zip_code": 97972141,
+  "is_default": 1,
+  "time": 16989824,
+  "status": 1
+}

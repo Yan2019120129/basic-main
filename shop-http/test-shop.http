@@ -1,0 +1,43 @@
+#---------admin/controllers/shop/user/attention
+POST {{base_url}}/shop/store/create
+Content-Type: application/json
+Token:{{token}}
+Token-Key: {{token_key}}
+
+{
+  "image": "/assets/images/bg_invite.jpg",
+  "name": "Cheiry",
+  "status": 1
+}
+###
+POST {{base_url}}/shop/order/delete
+Content-Type: application/json
+Token:{{token}}
+Token-Key: {{token_key}}
+
+{
+  "id": [
+    11,
+    12
+  ]
+}
+
+
+###
+POST {{base_url}}/shop/order/update
+Content-Type: application/json
+Token:{{token}}
+Token-Key: {{token_key}}
+
+{
+  "id": 1,
+  "name": "yan",
+  "phone": "19907751429",
+  "country": "ljjoasf",
+  "shipping_address": "yulin",
+  "door_number": 2415421,
+  "zip_code": 97972141,
+  "is_default": 1,
+  "time": 16989824,
+  "status": 1
+}

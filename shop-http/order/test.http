@@ -1,0 +1,93 @@
+#---------admin/controllers/shop/user/attention
+POST {{base_url}}/shop/order/create
+Content-Type: application/json
+Token:{{token}}
+Token-Key: {{token_key}}
+
+{
+  "admin_name": "admin",
+  "shop_logo": "shop_logo_url.jpg",
+  "shop_id": 1,
+  "shop_name": "test",
+  "product_id": 2,
+  "product_image": "product_image_url.jpg",
+  "product_description": "A wonderful product",
+  "attributes_specifications": "Size: Large, Color: Red",
+  "original_price": 50.00,
+  "transaction_price": 45.00,
+  "quantity": 2,
+  "user_name": "ceshi",
+  "payment_method": "Credit Card",
+  "shipping_address": "123 Main St, City, Country",
+  "user_operate": 1,
+  "order_status": 1,
+  "store_name": "Best Store",
+  "store_operate": 1,
+  "admin_operate_time": 1635234556
+}
+
+###
+
+POST {{base_url}}/shop/order/index
+Content-Type: application/json
+Token:{{token}}
+Token-Key: {{token_key}}
+
+{
+  "id": 1,
+  "admin_id": 1,
+  "shop_id": 3,
+  "shop_logo": "shop_logo_url.jpg",
+  "shop_name": "My Shop",
+  "product_id": 456,
+  "product_image": "product_image_url.jpg",
+  "product_description": "A wonderful product",
+  "attributes_specifications": "Size: Large, Color: Red",
+  "original_price": 50.00,
+  "transaction_price": 45.00,
+  "quantity": 2,
+  "user_id": 789,
+  "payment_method": "Credit Card",
+  "shipping_address": "123 Main St, City, Country",
+  "user_operate": 1,
+  "order_status": 1,
+  "user_operate_time": 1635234556,
+  "store_id": 987,
+  "store_operate": 1,
+  "store_operate_time": 1635234656,
+  "admin_operate_time": 1635234756,
+  "order_sn": "ABC123456"
+}
+
+
+###
+POST {{base_url}}/shop/order/delete
+Content-Type: application/json
+Token:{{token}}
+Token-Key: {{token_key}}
+
+{
+  "id": [
+    11,
+    12
+  ]
+}
+
+###
+POST {{base_url}}/shop/order/update
+Content-Type: application/json
+Token:{{token}}
+Token-Key: {{token_key}}
+
+{
+  "id": 1,
+  "name": "yan",
+  "phone": "19907751429",
+  "country": "ljjoasf",
+  "shipping_address": "yulin",
+  "door_number": 2415421,
+  "zip_code": 97972141,
+  "is_default": 1,
+  "time": 16989824,
+  "status": 1
+}

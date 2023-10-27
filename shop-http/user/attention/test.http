@@ -1,0 +1,44 @@
+#---------admin/controllers/shop/user/attention
+POST {{base_url}}/shop/attention/index
+Content-Type: application/json
+Token:{{token}}
+Token-Key: {{token_key}}
+
+{
+  "admin_name": "admin",
+  "username": "Joe Bennett",
+  "shop_name": "Kono Yamato",
+  "status": 1,
+  "created_at": {
+    "from": "2019/10/01",
+    "to": "2023/10/03"
+  },
+  "pagination": {
+    "sortBy": "id",
+    "descending": true,
+    "page": 1,
+    "rowsPerPage": 10
+  }
+}
+
+###
+POST {{base_url}}/shop/attention/update
+Content-Type: application/json
+Token:{{token}}
+Token-Key: {{token_key}}
+
+{
+  "id": 1,
+  "shop_logo": "/Users/Administrator/Pictures/img_504953.png",
+  "shop_name": "yan"
+}
+
+###
+POST {{base_url}}/shop/attention/delete
+Content-Type: application/json
+Token:{{token}}
+Token-Key: {{token_key}}
+
+{
+  "id": [1,2]
+}

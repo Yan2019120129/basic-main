@@ -1,0 +1,42 @@
+###
+POST {{base_url}}/shop/favorites/index
+Content-Type: application/json
+Token:{{token}}
+Token-Key: {{token_key}}
+
+{
+  "status": 1,
+  "admin_name": "admin",
+  "username": "Joe Bennett",
+  "pagination": {
+    "sortBy": "id",
+    "descending": true,
+    "page": 1,
+    "rowsPerPage": 2
+  }
+}
+
+###
+POST {{base_url}}/shop/favorites/delete
+Content-Type: application/json
+Token:{{token}}
+Token-Key: {{token_key}}
+
+{
+  "id": [1,2]
+}
+
+
+###
+POST {{base_url}}/shop/favorites/update
+Content-Type: application/json
+Token:{{token}}
+Token-Key: {{token_key}}
+
+{
+  "id": 11,
+  "user_id": 1,
+  "commodity_id": 726,
+  "product_name": "wang",
+  "product_imag": "/Users/Administrator/Pictures/img_504953.png"
+}

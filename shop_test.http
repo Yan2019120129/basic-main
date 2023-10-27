@@ -1,0 +1,22 @@
+POST http://localhost:8001/shop/user
+Content-type:application/json
+
+{
+  "id": 999,
+  "name": "content"
+}
+
+###
+POST http://localhost:8001/shop/favorites/index
+Content-type:application/json
+Token:"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBZG1pbklkIjoxLCJVc2VySWQiOjAsImV4cCI6MTY5ODIyMDQ4OSwiaWF0IjoxNjk4MTM0MDg5fQ.CYxALPOHwbTfNFk0n5CCgRro9zLLOQJ1e3X-Pw2Cl5k"
+Token-Key:"e8dcb94ff4554e24d7ac1a21a3971c5d"
+
+{
+  "pagination": {
+    "sortBy": "id",
+    "descending": true,
+    "page": 1,
+    "rowsPerPage": 10
+  }
+}
